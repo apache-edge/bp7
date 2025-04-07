@@ -22,6 +22,7 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/apache-edge/cbor.git", from: "0.0.3"),
         .package(url: "https://github.com/apple/swift-crypto.git", "1.0.0" ..< "3.0.0"),
+        .package(url: "https://github.com/apache-edge/cyclic-redundancy-check.git", from: "0.0.2"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -30,7 +31,8 @@ let package = Package(
             name: "BP7",
             dependencies: [
                 .product(name: "CBOR", package: "cbor"),
-                .product(name: "Crypto", package: "swift-crypto")
+                .product(name: "Crypto", package: "swift-crypto"),
+                .product(name: "CyclicRedundancyCheck", package: "cyclic-redundancy-check")
             ]
         ),
         .testTarget(
