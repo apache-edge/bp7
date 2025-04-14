@@ -396,11 +396,11 @@ public struct PrimaryBlock: CrcBlock, Equatable, Hashable, Sendable {
         let crcCode = UInt8(crcTypeValue)
         let crcValue: CrcValue
         switch crcCode {
-        case CyclicRedundancyCheck.NO:
+        case BP7CRC.NO:
             crcValue = .crcNo
-        case CyclicRedundancyCheck.CRC16:
+        case BP7CRC.CRC16:
             crcValue = .crc16Empty
-        case CyclicRedundancyCheck.CRC32:
+        case BP7CRC.CRC32:
             crcValue = .crc32Empty
         default:
             crcValue = .unknown(crcCode)

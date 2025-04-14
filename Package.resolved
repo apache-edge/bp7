@@ -1,5 +1,5 @@
 {
-  "originHash" : "2a4b5defb261379f3761968afbcf34acee0af7a31d00f785a797847c9beb6dd2",
+  "originHash" : "74482571a961bbbb519d2a8cd78c15579f2596c43481c9d712323738592de575",
   "pins" : [
     {
       "identity" : "cbor",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "7cc842ce80352e5055ece9a023a740a6133f0492",
         "version" : "0.0.3"
+      }
+    },
+    {
+      "identity" : "cyclic-redundancy-check",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apache-edge/cyclic-redundancy-check.git",
+      "state" : {
+        "revision" : "27ddbe07b6c145e45333ccc72c2e59ecb5f87749",
+        "version" : "0.0.2"
       }
     },
     {

@@ -212,9 +212,9 @@ public struct CanonicalBlock: Equatable, Sendable {
         
         // Determine CRC value
         let crc: CrcValue
-        if crcType == UInt64(CyclicRedundancyCheck.NO) {
+        if crcType == UInt64(BP7CRC.NO) {
             crc = .crcNo
-        } else if crcType == UInt64(CyclicRedundancyCheck.CRC16) {
+        } else if crcType == UInt64(BP7CRC.CRC16) {
             if items.count < 6 {
                 throw CanonicalError.decodingError("Missing CRC-16 data")
             }
@@ -227,7 +227,7 @@ public struct CanonicalBlock: Equatable, Sendable {
             crcData[0] = crcBytes[0]
             crcData[1] = crcBytes[1]
             crc = .crc16(crcData)
-        } else if crcType == UInt64(CyclicRedundancyCheck.CRC32) {
+        } else if crcType == UInt64(BP7CRC.CRC32) {
             if items.count < 6 {
                 throw CanonicalError.decodingError("Missing CRC-32 data")
             }
